@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm i:*)",
+      "Bash(export PATH=~/.npm-global/bin:$PATH)",
+      "Bash(claude:*)"
+    ]
+  }
+}

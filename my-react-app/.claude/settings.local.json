@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:climate.gg.go.kr)",
+      "WebSearch",
+      "Bash(npm run build:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(wc:*)",
+      "Bash(ls:*)"
+    ]
+  }
+}
