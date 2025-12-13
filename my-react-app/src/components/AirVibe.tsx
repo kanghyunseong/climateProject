@@ -151,13 +151,14 @@ export default function AirVibe({ center }: AirVibeProps) {
       <h3>💨 미세먼지 기반 실내 활동 최적화 (AirVibe)</h3>
 
       {!center && (
-        <div style={{ 
-          padding: '1rem', 
-          background: '#fff3cd', 
+        <div style={{
+          padding: '1rem',
+          background: 'rgba(251, 191, 36, 0.15)',
+          border: '1px solid rgba(251, 191, 36, 0.3)',
           borderRadius: '8px',
           marginBottom: '1rem',
           fontSize: '0.85rem',
-          color: '#856404'
+          color: '#fbbf24'
         }}>
           ⚠️ 지도를 클릭하여 위치를 선택하세요.
         </div>
@@ -170,9 +171,9 @@ export default function AirVibe({ center }: AirVibeProps) {
           style={{
             width: '100%',
             padding: '0.75rem',
-            background: showPreferences ? '#667eea' : '#f8f9fa',
-            color: showPreferences ? 'white' : '#333',
-            border: '1px solid #e0e0e0',
+            background: showPreferences ? 'rgba(102, 126, 234, 0.3)' : 'rgba(30, 41, 59, 0.6)',
+            color: showPreferences ? '#a78bfa' : '#f1f5f9',
+            border: '1px solid rgba(148, 163, 184, 0.2)',
             borderRadius: '8px',
             cursor: 'pointer',
             fontSize: '0.85rem',
@@ -186,10 +187,12 @@ export default function AirVibe({ center }: AirVibeProps) {
         {showPreferences && (
           <div style={{
             padding: '1rem',
-            background: '#f8f9fa',
+            background: 'rgba(30, 41, 59, 0.6)',
+            border: '1px solid rgba(148, 163, 184, 0.2)',
             borderRadius: '8px',
             marginBottom: '1rem',
             fontSize: '0.85rem',
+            color: '#f1f5f9',
           }}>
             <div style={{ marginBottom: '0.75rem' }}>
               <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
@@ -255,10 +258,11 @@ export default function AirVibe({ center }: AirVibeProps) {
             <div style={{
               marginTop: '0.75rem',
               padding: '0.75rem',
-              background: '#e3f2fd',
+              background: 'rgba(96, 165, 250, 0.15)',
+              border: '1px solid rgba(96, 165, 250, 0.3)',
               borderRadius: '6px',
               fontSize: '0.75rem',
-              color: '#1976d2',
+              color: '#60a5fa',
             }}>
               💡 설정은 자동으로 저장되며, 다음 방문 시에도 유지됩니다.
             </div>
@@ -275,7 +279,7 @@ export default function AirVibe({ center }: AirVibeProps) {
         >
           {isLoading ? '분석 중...' : '활동 적합도 분석'}
         </button>
-        
+
         {/* 공기질 지도 표시 토글 */}
         {center && (
           <label style={{
@@ -283,10 +287,12 @@ export default function AirVibe({ center }: AirVibeProps) {
             alignItems: 'center',
             gap: '0.5rem',
             padding: '0.75rem',
-            background: '#f8f9fa',
+            background: 'rgba(30, 41, 59, 0.6)',
+            border: '1px solid rgba(148, 163, 184, 0.2)',
             borderRadius: '8px',
             cursor: 'pointer',
             fontSize: '0.85rem',
+            color: '#f1f5f9',
           }}>
             <input
               type="checkbox"
@@ -328,27 +334,28 @@ export default function AirVibe({ center }: AirVibeProps) {
           {/* 대기질 상세 정보 */}
           <div style={{
             padding: '1rem',
-            background: '#f8f9fa',
+            background: 'rgba(30, 41, 59, 0.6)',
+            border: '1px solid rgba(148, 163, 184, 0.2)',
             borderRadius: '8px',
             marginBottom: '1rem',
           }}>
-            <h4 style={{ fontSize: '0.9rem', marginBottom: '0.75rem' }}>대기질 상세 정보</h4>
-            <div style={{ display: 'grid', gap: '0.5rem', fontSize: '0.85rem' }}>
+            <h4 style={{ fontSize: '0.9rem', marginBottom: '0.75rem', color: '#f1f5f9' }}>대기질 상세 정보</h4>
+            <div style={{ display: 'grid', gap: '0.5rem', fontSize: '0.85rem', color: '#cbd5e1' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>PM2.5:</span>
-                <span style={{ fontWeight: '600' }}>{airQuality.pm25.toFixed(1)} ㎍/㎥</span>
+                <span style={{ fontWeight: '600', color: '#f1f5f9' }}>{airQuality.pm25.toFixed(1)} ㎍/㎥</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>PM10:</span>
-                <span style={{ fontWeight: '600' }}>{airQuality.pm10.toFixed(1)} ㎍/㎥</span>
+                <span style={{ fontWeight: '600', color: '#f1f5f9' }}>{airQuality.pm10.toFixed(1)} ㎍/㎥</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>오존:</span>
-                <span style={{ fontWeight: '600' }}>{airQuality.ozone.toFixed(3)} ppm</span>
+                <span style={{ fontWeight: '600', color: '#f1f5f9' }}>{airQuality.ozone.toFixed(3)} ppm</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>체감 온도:</span>
-                <span style={{ fontWeight: '600' }}>{airQuality.feelsLike.toFixed(1)}°C</span>
+                <span style={{ fontWeight: '600', color: '#f1f5f9' }}>{airQuality.feelsLike.toFixed(1)}°C</span>
               </div>
             </div>
           </div>
@@ -356,7 +363,7 @@ export default function AirVibe({ center }: AirVibeProps) {
           {/* 실내 시설 추천 */}
           {indoorFacilities.length > 0 && (
             <div>
-              <h4 style={{ fontSize: '0.9rem', marginBottom: '0.75rem' }}>
+              <h4 style={{ fontSize: '0.9rem', marginBottom: '0.75rem', color: '#f1f5f9' }}>
                 🏢 추천 실내 시설 ({indoorFacilities.length}개)
               </h4>
               <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
@@ -365,29 +372,30 @@ export default function AirVibe({ center }: AirVibeProps) {
                     key={index}
                     style={{
                       padding: '0.75rem',
-                      background: '#fff',
+                      background: 'rgba(30, 41, 59, 0.6)',
                       borderRadius: '8px',
                       marginBottom: '0.5rem',
-                      border: '1px solid #e0e0e0',
+                      border: '1px solid rgba(148, 163, 184, 0.2)',
                     }}
                   >
-                    <div style={{ fontWeight: '600', marginBottom: '0.25rem' }}>
+                    <div style={{ fontWeight: '600', marginBottom: '0.25rem', color: '#f1f5f9' }}>
                       {facility.name}
                     </div>
-                    <div style={{ fontSize: '0.75rem', color: '#666' }}>
+                    <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
                       {facility.type} | 거리: {facility.distance.toFixed(1)}km
                     </div>
-                    <div style={{ fontSize: '0.75rem', color: '#999', marginTop: '0.25rem' }}>
+                    <div style={{ fontSize: '0.75rem', color: '#64748b', marginTop: '0.25rem' }}>
                       {facility.address}
                     </div>
                     <div style={{
                       display: 'inline-block',
                       padding: '0.25rem 0.5rem',
-                      background: facility.airQuality === 'good' ? '#e8f5e9' : '#fff3e0',
+                      background: facility.airQuality === 'good' ? 'rgba(74, 222, 128, 0.15)' : 'rgba(251, 191, 36, 0.15)',
+                      border: `1px solid ${facility.airQuality === 'good' ? 'rgba(74, 222, 128, 0.3)' : 'rgba(251, 191, 36, 0.3)'}`,
                       borderRadius: '4px',
                       fontSize: '0.7rem',
                       marginTop: '0.25rem',
-                      color: facility.airQuality === 'good' ? '#2e7d32' : '#e65100',
+                      color: facility.airQuality === 'good' ? '#4ade80' : '#fbbf24',
                     }}>
                       공기질: {facility.airQuality === 'good' ? '좋음' : '보통'}
                     </div>

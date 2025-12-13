@@ -219,7 +219,7 @@ export default function RegionRecommendation({ onCitySelect }: RegionRecommendat
         gap: '0.5rem',
         marginBottom: '0.75rem',
         fontSize: '0.8rem',
-        color: '#666',
+        color: '#94a3b8',
       }}>
         <input
           type="checkbox"
@@ -248,9 +248,9 @@ export default function RegionRecommendation({ onCitySelect }: RegionRecommendat
               onClick={() => handleCityClick(city)}
               style={{
                 padding: '0.75rem',
-                background: index === 0 ? 'rgba(102, 126, 234, 0.1)' : '#f8f9fa',
+                background: index === 0 ? 'rgba(102, 126, 234, 0.2)' : 'rgba(30, 41, 59, 0.6)',
                 borderRadius: '8px',
-                border: `1px solid ${index === 0 ? '#667eea' : '#e0e0e0'}`,
+                border: `1px solid ${index === 0 ? 'rgba(102, 126, 234, 0.5)' : 'rgba(148, 163, 184, 0.2)'}`,
                 cursor: onCitySelect ? 'pointer' : 'default',
                 transition: 'all 0.2s ease',
               }}
@@ -326,15 +326,17 @@ export default function RegionRecommendation({ onCitySelect }: RegionRecommendat
       <div style={{
         marginTop: '1rem',
         padding: '0.75rem',
-        background: '#f8f9fa',
+        background: 'rgba(30, 41, 59, 0.6)',
+        border: '1px solid rgba(148, 163, 184, 0.2)',
         borderRadius: '8px',
         fontSize: '0.75rem',
+        color: '#f1f5f9',
       }}>
-        <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>상태 기준</div>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <span>☀️ <span style={{ color: '#4caf50' }}>쾌적</span>: 야외활동 적합</span>
-          <span>⛅ <span style={{ color: '#ff9800' }}>보통</span>: 일부 주의</span>
-          <span>🌧️ <span style={{ color: '#f44336' }}>주의</span>: 실내활동 권장</span>
+        <div style={{ fontWeight: '600', marginBottom: '0.5rem', color: '#f1f5f9' }}>상태 기준</div>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', color: '#cbd5e1' }}>
+          <span>☀️ <span style={{ color: '#4ade80' }}>쾌적</span>: 야외활동 적합</span>
+          <span>⛅ <span style={{ color: '#fbbf24' }}>보통</span>: 일부 주의</span>
+          <span>🌧️ <span style={{ color: '#f87171' }}>주의</span>: 실내활동 권장</span>
         </div>
       </div>
 

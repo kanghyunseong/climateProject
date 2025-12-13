@@ -442,10 +442,10 @@ export default function LaunchWindowPredictor({ center, trajectoryMode, customTr
     boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
   };
 
-  // 글래스 스타일 공통 설정
-  const glassTextPrimary = '#f1f5f9';
-  const glassTextSecondary = '#94a3b8';
-  const glassTextMuted = '#64748b';
+  // 글래스 스타일 공통 설정 (필요시 사용)
+  // const glassTextPrimary = '#f1f5f9';
+  // const glassTextSecondary = '#94a3b8';
+  // const glassTextMuted = '#64748b';
 
   return (
     <div className="launch-window-predictor" style={{ ...cardStyle, padding: '16px' }}>

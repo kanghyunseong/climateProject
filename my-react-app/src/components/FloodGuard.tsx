@@ -282,17 +282,17 @@ export default function FloodGuard({ center, onHeatmapDataUpdate }: FloodGuardPr
       {alerts.length > 0 && (
         <div style={{
           padding: '1rem',
-          background: '#fee',
+          background: 'rgba(248, 113, 113, 0.15)',
           borderRadius: '8px',
           marginBottom: '1rem',
-          border: '2px solid #f44336',
+          border: '2px solid #f87171',
         }}>
-          <div style={{ fontWeight: '600', color: '#d32f2f', marginBottom: '0.5rem' }}>
+          <div style={{ fontWeight: '600', color: '#f87171', marginBottom: '0.5rem' }}>
             🚨 1시간 내 침수 위험 경고 ({alerts.length}개)
           </div>
-          <div style={{ fontSize: '0.85rem', maxHeight: '150px', overflowY: 'auto' }}>
+          <div style={{ fontSize: '0.85rem', maxHeight: '150px', overflowY: 'auto', color: '#f1f5f9' }}>
             {alerts.map((alert, index) => (
-              <div key={index} style={{ marginBottom: '0.5rem', paddingBottom: '0.5rem', borderBottom: '1px solid #ffcdd2' }}>
+              <div key={index} style={{ marginBottom: '0.5rem', paddingBottom: '0.5rem', borderBottom: '1px solid rgba(248, 113, 113, 0.3)' }}>
                 <div>위치: {alert.location}</div>
                 <div>예상 시간: {alert.time}</div>
                 <div>위험도: {alert.risk}%</div>
@@ -306,15 +306,15 @@ export default function FloodGuard({ center, onHeatmapDataUpdate }: FloodGuardPr
       {aiPrediction && useAI && (
         <div style={{
           padding: '1rem',
-          background: '#e3f2fd',
+          background: 'rgba(96, 165, 250, 0.15)',
           borderRadius: '8px',
           marginBottom: '1rem',
-          border: '2px solid #2196f3',
+          border: '2px solid #60a5fa',
         }}>
-          <div style={{ fontWeight: '600', color: '#1976d2', marginBottom: '0.5rem' }}>
+          <div style={{ fontWeight: '600', color: '#60a5fa', marginBottom: '0.5rem' }}>
             🤖 AI 예보 결과 (Groq)
           </div>
-          <div style={{ fontSize: '0.85rem', lineHeight: '1.6' }}>
+          <div style={{ fontSize: '0.85rem', lineHeight: '1.6', color: '#f1f5f9' }}>
             <div><strong>위험도:</strong> {riskLabel(aiPrediction.riskLevel)} ({aiPrediction.riskLevel === 'critical' ? 95 : aiPrediction.riskLevel === 'high' ? 90 : aiPrediction.riskLevel === 'medium' ? 60 : 30}%)</div>
             <div><strong>예상 침수 깊이:</strong> {aiPrediction.predictedFloodDepth.toFixed(2)}m</div>
             <div><strong>신뢰도:</strong> {(aiPrediction.confidence * 100).toFixed(0)}%</div>
@@ -324,7 +324,7 @@ export default function FloodGuard({ center, onHeatmapDataUpdate }: FloodGuardPr
             {aiPrediction.recommendations && aiPrediction.recommendations.length > 0 && (
               <div style={{ marginTop: '0.5rem' }}>
                 <strong>권장사항:</strong>
-                <ul style={{ margin: '0.25rem 0', paddingLeft: '1.25rem' }}>
+                <ul style={{ margin: '0.25rem 0', paddingLeft: '1.25rem', color: '#cbd5e1' }}>
                   {aiPrediction.recommendations.map((rec, idx) => (
                     <li key={idx} style={{ fontSize: '0.8rem' }}>{rec}</li>
                   ))}

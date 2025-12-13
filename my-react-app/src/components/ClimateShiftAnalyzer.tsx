@@ -230,9 +230,9 @@ export default function ClimateShiftAnalyzer({ center }: ClimateShiftAnalyzerPro
           onClick={() => setActiveTab('comparison')}
           style={{
             padding: '0.5rem 1rem',
-            background: activeTab === 'comparison' ? '#667eea' : '#f8f9fa',
-            color: activeTab === 'comparison' ? 'white' : '#333',
-            border: '1px solid #e0e0e0',
+            background: activeTab === 'comparison' ? 'rgba(102, 126, 234, 0.3)' : 'rgba(30, 41, 59, 0.6)',
+            color: activeTab === 'comparison' ? '#a78bfa' : '#94a3b8',
+            border: '1px solid rgba(148, 163, 184, 0.2)',
             borderRadius: '6px',
             cursor: 'pointer',
             fontSize: '0.85rem',
@@ -244,9 +244,9 @@ export default function ClimateShiftAnalyzer({ center }: ClimateShiftAnalyzerPro
           onClick={() => setActiveTab('extreme')}
           style={{
             padding: '0.5rem 1rem',
-            background: activeTab === 'extreme' ? '#667eea' : '#f8f9fa',
-            color: activeTab === 'extreme' ? 'white' : '#333',
-            border: '1px solid #e0e0e0',
+            background: activeTab === 'extreme' ? 'rgba(102, 126, 234, 0.3)' : 'rgba(30, 41, 59, 0.6)',
+            color: activeTab === 'extreme' ? '#a78bfa' : '#94a3b8',
+            border: '1px solid rgba(148, 163, 184, 0.2)',
             borderRadius: '6px',
             cursor: 'pointer',
             fontSize: '0.85rem',
@@ -258,9 +258,9 @@ export default function ClimateShiftAnalyzer({ center }: ClimateShiftAnalyzerPro
           onClick={() => setActiveTab('pattern')}
           style={{
             padding: '0.5rem 1rem',
-            background: activeTab === 'pattern' ? '#667eea' : '#f8f9fa',
-            color: activeTab === 'pattern' ? 'white' : '#333',
-            border: '1px solid #e0e0e0',
+            background: activeTab === 'pattern' ? 'rgba(102, 126, 234, 0.3)' : 'rgba(30, 41, 59, 0.6)',
+            color: activeTab === 'pattern' ? '#a78bfa' : '#94a3b8',
+            border: '1px solid rgba(148, 163, 184, 0.2)',
             borderRadius: '6px',
             cursor: 'pointer',
             fontSize: '0.85rem',
@@ -272,9 +272,9 @@ export default function ClimateShiftAnalyzer({ center }: ClimateShiftAnalyzerPro
           onClick={() => setActiveTab('trend')}
           style={{
             padding: '0.5rem 1rem',
-            background: activeTab === 'trend' ? '#667eea' : '#f8f9fa',
-            color: activeTab === 'trend' ? 'white' : '#333',
-            border: '1px solid #e0e0e0',
+            background: activeTab === 'trend' ? 'rgba(102, 126, 234, 0.3)' : 'rgba(30, 41, 59, 0.6)',
+            color: activeTab === 'trend' ? '#a78bfa' : '#94a3b8',
+            border: '1px solid rgba(148, 163, 184, 0.2)',
             borderRadius: '6px',
             cursor: 'pointer',
             fontSize: '0.85rem',
@@ -295,7 +295,7 @@ export default function ClimateShiftAnalyzer({ center }: ClimateShiftAnalyzerPro
             <div>
               <div style={{ marginBottom: '1rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <div>
-                  <label style={{ fontSize: '0.85rem', color: '#666', display: 'block', marginBottom: '0.25rem' }}>
+                  <label style={{ fontSize: '0.85rem', color: '#94a3b8', display: 'block', marginBottom: '0.25rem' }}>
                     기준 연도:
                   </label>
                   <input
@@ -308,7 +308,7 @@ export default function ClimateShiftAnalyzer({ center }: ClimateShiftAnalyzerPro
                   />
                 </div>
                 <div>
-                  <label style={{ fontSize: '0.85rem', color: '#666', display: 'block', marginBottom: '0.25rem' }}>
+                  <label style={{ fontSize: '0.85rem', color: '#94a3b8', display: 'block', marginBottom: '0.25rem' }}>
                     비교 연도:
                   </label>
                   <input
@@ -367,11 +367,11 @@ export default function ClimateShiftAnalyzer({ center }: ClimateShiftAnalyzerPro
           {/* CSA-02: 극단 기상 이벤트 탐지 */}
           {activeTab === 'extreme' && (
             <div>
-              <div style={{ marginBottom: '1rem', padding: '1rem', background: '#f8f9fa', borderRadius: '8px' }}>
+              <div style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(30, 41, 59, 0.6)', border: '1px solid rgba(148, 163, 184, 0.2)', borderRadius: '8px' }}>
                 <h4 style={{ fontSize: '0.95rem', marginBottom: '0.75rem' }}>극단 기준 설정</h4>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.75rem' }}>
                   <div>
-                    <label style={{ fontSize: '0.85rem', color: '#666', display: 'block', marginBottom: '0.25rem' }}>
+                    <label style={{ fontSize: '0.85rem', color: '#94a3b8', display: 'block', marginBottom: '0.25rem' }}>
                       최고 기온 임계값 (°C):
                     </label>
                     <input
@@ -387,7 +387,7 @@ export default function ClimateShiftAnalyzer({ center }: ClimateShiftAnalyzerPro
                     />
                   </div>
                   <div>
-                    <label style={{ fontSize: '0.85rem', color: '#666', display: 'block', marginBottom: '0.25rem' }}>
+                    <label style={{ fontSize: '0.85rem', color: '#94a3b8', display: 'block', marginBottom: '0.25rem' }}>
                       최저 기온 임계값 (°C):
                     </label>
                     <input
@@ -403,7 +403,7 @@ export default function ClimateShiftAnalyzer({ center }: ClimateShiftAnalyzerPro
                     />
                   </div>
                   <div>
-                    <label style={{ fontSize: '0.85rem', color: '#666', display: 'block', marginBottom: '0.25rem' }}>
+                    <label style={{ fontSize: '0.85rem', color: '#94a3b8', display: 'block', marginBottom: '0.25rem' }}>
                       최대 강수량 임계값 (mm):
                     </label>
                     <input
@@ -419,7 +419,7 @@ export default function ClimateShiftAnalyzer({ center }: ClimateShiftAnalyzerPro
                     />
                   </div>
                   <div>
-                    <label style={{ fontSize: '0.85rem', color: '#666', display: 'block', marginBottom: '0.25rem' }}>
+                    <label style={{ fontSize: '0.85rem', color: '#94a3b8', display: 'block', marginBottom: '0.25rem' }}>
                       최대 풍속 임계값 (m/s):
                     </label>
                     <input
@@ -456,7 +456,7 @@ export default function ClimateShiftAnalyzer({ center }: ClimateShiftAnalyzerPro
                 </ResponsiveContainer>
               </div>
 
-              <div style={{ marginTop: '1rem', fontSize: '0.85rem', color: '#666' }}>
+              <div style={{ marginTop: '1rem', fontSize: '0.85rem', color: '#94a3b8' }}>
                 총 {extremeEvents.length}개의 극단 이벤트가 탐지되었습니다.
               </div>
             </div>
@@ -531,7 +531,7 @@ export default function ClimateShiftAnalyzer({ center }: ClimateShiftAnalyzerPro
                   />
                 </ComposedChart>
               </ResponsiveContainer>
-              <div style={{ marginTop: '1rem', fontSize: '0.85rem', color: '#666' }}>
+              <div style={{ marginTop: '1rem', fontSize: '0.85rem', color: '#94a3b8' }}>
                 빨간색 점은 평년 대비 이상치(±2 표준편차 이상)를 나타냅니다.
               </div>
             </div>
@@ -577,7 +577,7 @@ export default function ClimateShiftAnalyzer({ center }: ClimateShiftAnalyzerPro
                   />
                 </LineChart>
               </ResponsiveContainer>
-              <div style={{ marginTop: '1rem', padding: '1rem', background: '#f8f9fa', borderRadius: '8px' }}>
+              <div style={{ marginTop: '1rem', padding: '1rem', background: 'rgba(30, 41, 59, 0.6)', border: '1px solid rgba(148, 163, 184, 0.2)', borderRadius: '8px' }}>
                 <h4 style={{ fontSize: '0.95rem', marginBottom: '0.5rem' }}>예측 결과</h4>
                 <div style={{ display: 'grid', gap: '0.5rem', fontSize: '0.85rem' }}>
                   {trendPrediction.map((pred, index) => (
